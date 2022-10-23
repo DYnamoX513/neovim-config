@@ -23,6 +23,11 @@
 
 * C/C++/OC: [coc-clangd](https://github.com/clangd/coc-clangd)  
   prerequisite: clangd  
+  formatting issue: See https://github.com/clangd/coc-clangd/issues/345, https://github.com/clangd/coc-clangd/issues/39  
+  ```yaml
+  # .clang-format: 
+  IndentWidth: 4
+  ```  
   
 * Python: [coc-pyright](https://github.com/fannheyward/coc-pyright)  
   code formatter: [black](https://github.com/psf/black)  
