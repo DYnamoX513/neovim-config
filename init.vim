@@ -1,5 +1,5 @@
-" let loaded = 1
-" let loaded_netrwPlugin = 1
+let loaded = 1
+let loaded_netrwPlugin = 1
 
 set number
 set relativenumber
@@ -48,7 +48,7 @@ Plug 'kyazdani42/nvim-tree.lua' " File explorer written in lua
 Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
 call plug#end()
 
-" nnoremap <C-t> :NvimTreeToggle<CR>
+nnoremap <C-t> :NvimTreeToggle<CR>
 
 function! LuaSetup()
 lua << EOF
@@ -63,7 +63,6 @@ lua << EOF
 			diagnostics = "coc"
 		}
 	}
-
 
 	require("nvim-tree").setup {
 		view = {
