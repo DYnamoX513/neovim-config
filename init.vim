@@ -1,5 +1,5 @@
-let loaded = 1
-let loaded_netrwPlugin = 1
+" let loaded = 1
+" let loaded_netrwPlugin = 1
 
 set number
 set relativenumber
@@ -15,6 +15,8 @@ set cursorline
 set scrolloff=4
 set sidescrolloff=4
 set clipboard+=unnamedplus
+
+set termguicolors
 
 " in lua/user/coc.lua
 " set signcolumn=yes
@@ -32,22 +34,39 @@ Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " Auto Comple
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'lukas-reineke/indent-blankline.nvim' " blank line indent
+
+" Plug 'https://github.com/LunarVim/darkplus.nvim.git'
+" Telescope
+Plug 'nvim-lua/plenary.nvim' " dependency
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
+" Stop using these because of an unknown bug in WSL -- 11/03/2022
 Plug 'kyazdani42/nvim-tree.lua' " File explorer written in lua
 Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
 call plug#end()
 
-nnoremap <C-t> :NvimTreeToggle<CR>
+" nnoremap <C-t> :NvimTreeToggle<CR>
 
 function! LuaSetup()
 lua << EOF
-	require'user.indent-blankline'
-	require'user.treesitter'
-	require'user.coc'
-	require'user.autopair'
+	require('user.indent-blankline')
+	require('user.treesitter')
+	require('user.coc')
+	require('user.autopair')
+	require('user.telescope')
 	require('nvim_comment').setup {}
+	require("bufferline").setup {
+		options = {
+			diagnostics = "coc"
+		}
+	}
+
+
 	require("nvim-tree").setup {
 		view = {
-			-- adaptive_size = true,
 			mappings = {
 				list = {
 					{ key = "t", action = "tabnew" },
@@ -62,3 +81,4 @@ endfunction
 call LuaSetup()
 
 colorscheme hybrid
+" colorscheme darkplus

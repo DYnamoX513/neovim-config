@@ -6,6 +6,8 @@
 * vim-plug
 * nodejs (required by Coc)
 * universal-ctags (required by Tagbar)
+* ripgrep (required by Telescope live_grep)  
+* fd (optional: required by Telescope finder)  
 
 ## Installation (Linux)
 
@@ -17,7 +19,11 @@
 3. **nodejs**  [Official cite](https://nodejs.org/en/)  
 [_Install Node.js on Windows Subsystem for Linux (WSL2)_](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl)  
 
-4. **universal-ctags**  [Github](https://github.com/universal-ctags/ctags)
+4. **universal-ctags**  [Github](https://github.com/universal-ctags/ctags)  
+
+5. **ripgrep** [Github](https://github.com/BurntSushi/ripgrep)  
+
+6. **fd** optional [Github](https://github.com/sharkdp/fd)  
 
 ## Coc extensions
 
