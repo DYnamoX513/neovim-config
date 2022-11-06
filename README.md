@@ -6,8 +6,9 @@
 * vim-plug
 * nodejs (required by Coc)
 * universal-ctags (required by Tagbar)
-* ripgrep (required by Telescope live_grep)  
-* fd (optional: required by Telescope finder)  
+* ripgrep (required by Telescope live\_grep)
+* fd (_optional_: required by Telescope finder)
+* lazygit (_optional_: required by toggleterm)
 
 ## Installation (Linux)
 
@@ -23,7 +24,9 @@
 
 5. **ripgrep** [Github](https://github.com/BurntSushi/ripgrep)  
 
-6. **fd** optional [Github](https://github.com/sharkdp/fd)  
+6. **fd** _optional_ [Github](https://github.com/sharkdp/fd)  
+
+7. **lazygit** _optional_ [Github](https://github.com/jesseduffield/lazygit)  
 
 ## Coc extensions
 
