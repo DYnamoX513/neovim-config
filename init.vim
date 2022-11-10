@@ -51,6 +51,7 @@ Plug 'kyazdani42/nvim-tree.lua' " File explorer written in lua
 Plug 'kyazdani42/nvim-web-devicons' " File icons
 
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'} " Float terminal
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 nnoremap <C-t> :NvimTreeToggle<CR>
@@ -64,6 +65,7 @@ lua << EOF
 	require('user.telescope')
 	require('user.toggleterm')
 	require('nvim_comment').setup {}
+	require('gitsigns').setup {}
 	require("bufferline").setup {
 		options = {
 			diagnostics = "coc"
@@ -85,4 +87,5 @@ endfunction
 
 call LuaSetup()
 
-colorscheme hybrid
+" colorscheme hybrid
+colorscheme onedark
