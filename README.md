@@ -37,6 +37,12 @@
   # .clang-format: 
   IndentWidth: 4
   ```  
+
+  Using C++11 standard  
+  ```
+  # compile_flags.txt
+  -std=c++11
+  ```
   
 * Python: [coc-pyright](https://github.com/fannheyward/coc-pyright)  
   code formatter: [black](https://github.com/psf/black)  
