@@ -71,17 +71,7 @@ lua << EOF
 			diagnostics = "coc"
 		}
 	}
-	require("nvim-tree").setup {
-		view = {
-			adaptive_size = true,
-			mappings = {
-				list = {
-					{ key = "t", action = "tabnew" },
-					{ key = "<C-t>", action = "" },
-				},
-			},
-		},
-	}
+	require("user.nvim-tree-on-attach")
 EOF
 endfunction
 
