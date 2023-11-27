@@ -52,6 +52,7 @@ Plug 'kyazdani42/nvim-web-devicons' " File icons
 
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'} " Float terminal
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
 
 nnoremap <C-t> :NvimTreeToggle<CR>
@@ -64,6 +65,7 @@ lua << EOF
 	require('user.autopair')
 	require('user.telescope')
 	require('user.toggleterm')
+	require('user.nvim-tree')
 	require('nvim_comment').setup {}
 	require('gitsigns').setup {}
 	require("bufferline").setup {
@@ -71,21 +73,12 @@ lua << EOF
 			diagnostics = "coc"
 		}
 	}
-	require("nvim-tree").setup {
-		view = {
-			adaptive_size = true,
-			mappings = {
-				list = {
-					{ key = "t", action = "tabnew" },
-					{ key = "<C-t>", action = "" },
-				},
-			},
-		},
-	}
 EOF
 endfunction
 
 call LuaSetup()
 
 " colorscheme hybrid
-colorscheme onedark
+" colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+let g:airline_theme='catppuccin'
+colorscheme catppuccin-frappe
